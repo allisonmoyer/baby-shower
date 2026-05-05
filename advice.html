@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share Advice & Well Wishes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="site-shell">
+  <main class="page page-entry">
+    <section class="entry-header">
+      <a class="back-link" href="./index.html">Back</a>
+      <p class="eyebrow">Advice & Well Wishes</p>
+      <h1>Leave a note for the parents.</h1>
+      <p class="section-text">
+        Parenting advice, encouragement, favorite newborn tips, or a warm little message for the next chapter.
+      </p>
+    </section>
+
+    <section class="entry-band">
+      <form class="entry-form" data-entry-form="advice" novalidate>
+        <div class="segmented-control" role="group" aria-label="Choose who receives this note">
+          <button type="button" class="segment is-active" data-recipient-option="both">Send to both</button>
+          <button type="button" class="segment" data-recipient-option="allie">Send to Allie</button>
+          <button type="button" class="segment" data-recipient-option="mel">Send to Mel</button>
+        </div>
+
+        <input type="hidden" name="recipient" value="both">
+        <input type="hidden" name="formType" value="advice">
+        <input type="hidden" name="submittedAt" value="">
+        <input type="hidden" name="eventTitle" value="">
+
+        <label class="field">
+          <span class="field-label">Your name</span>
+          <input class="text-input" type="text" name="guestName" maxlength="80" placeholder="Optional">
+        </label>
+
+        <label class="field">
+          <span class="field-label">Advice or wishes</span>
+          <textarea class="text-area" name="message" rows="8" maxlength="1800" placeholder="Write anything you'd love the parents to read later." required></textarea>
+        </label>
+
+        <label class="field">
+          <span class="field-label">Favorite season or stage</span>
+          <input class="text-input" type="text" name="timing" maxlength="140" placeholder="Optional">
+        </label>
+
+        <div class="form-actions">
+          <button class="primary-button" type="submit">Send note</button>
+          <p class="form-note" data-status-copy>Notes are saved privately for the parents.</p>
+        </div>
+      </form>
+
+      <section class="success-state" data-success-state hidden>
+        <p class="eyebrow">Sent</p>
+        <h2>Thank you for sharing.</h2>
+        <p class="section-text" data-success-copy>
+          Your note has been saved.
+        </p>
+        <div class="success-actions">
+          <button class="secondary-button" type="button" data-reset-form>Add another</button>
+          <a class="secondary-link" href="./traditions.html">Share a tradition too</a>
+        </div>
+      </section>
+    </section>
+
+    <iframe title="Hidden submission target" name="submission-frame" class="submission-frame"></iframe>
+  </main>
+
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

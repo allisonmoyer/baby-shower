@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submission Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="site-shell">
+  <main class="page page-dashboard">
+    <section class="entry-header">
+      <a class="back-link" href="./index.html">Back</a>
+      <p class="eyebrow">Preview Dashboard</p>
+      <h1>Review submissions.</h1>
+      <p class="section-text">
+        Local test entries show up here. For the live shower, the recommended source of truth is your private Google Sheet.
+      </p>
+    </section>
+
+    <section class="stats-band" data-dashboard-stats></section>
+
+    <section class="sheet-links-band">
+      <div class="sheet-links-copy">
+        <p class="info-label">Live results</p>
+        <h2>Open your spreadsheet</h2>
+      </div>
+      <div class="sheet-link-list" data-sheet-links></div>
+    </section>
+
+    <section class="entries-band">
+      <div class="entries-header">
+        <p class="info-label">Local preview entries</p>
+        <button class="secondary-button" type="button" data-clear-local>Clear local preview data</button>
+      </div>
+      <div class="entry-list" data-dashboard-list></div>
+    </section>
+  </main>
+
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
